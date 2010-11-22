@@ -73,3 +73,9 @@
 [submodule "bundle/yankring"]
 	path = bundle/yankring
 	url = http://github.com/chrismetcalf/vim-yankring.git
+[submodule "bundle/align"]
+	path = bundle/align
+	url = git://github.com/tsaleh/vim-align.git
+[submodule "bundle/javascript"]
+	path = bundle/javascript
+	url = git://github.com/pangloss/vim-javascript.git
