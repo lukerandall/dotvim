@@ -49,9 +49,6 @@
 [submodule "bundle/ruby"]
 	path = bundle/ruby
 	url = http://github.com/vim-ruby/vim-ruby.git
-[submodule "bundle/snipmate"]
-	path = bundle/snipmate
-	url = http://github.com/msanders/snipmate.vim.git
 [submodule "bundle/space"]
 	path = bundle/space
 	url = http://github.com/spiiph/vim-space.git
@@ -79,6 +76,6 @@
 [submodule "bundle/javascript"]
 	path = bundle/javascript
 	url = git://github.com/pangloss/vim-javascript.git
-[submodule "bundle/snippets"]
-	path = bundle/snippets
-	url = https://github.com/scrooloose/snipmate-snippets.git
+[submodule "bundle/snipmate2"]
+	path = bundle/snipmate2
+	url = git@github.com:lukerandall/snipmate.vim.git
