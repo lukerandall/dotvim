@@ -79,3 +79,6 @@
 [submodule "bundle/javascript"]
 	path = bundle/javascript
 	url = git://github.com/pangloss/vim-javascript.git
+[submodule "bundle/snippets"]
+	path = bundle/snippets
+	url = https://github.com/scrooloose/snipmate-snippets.git
