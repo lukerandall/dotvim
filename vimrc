@@ -80,9 +80,6 @@ set shortmess=atI " Shorten file messages
 
 runtime macros/matchit.vim " Enable matching with %
 
-" f5 removes trailing whitespace
-nnoremap <silent> <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>:retab<CR>
-
 " duplicate selection in visual mode
 vmap D y'>p
 
@@ -114,8 +111,38 @@ au BufEnter *.hs compiler ghc
 let g:haddock_browser = "open"
 let g:ghc = "/usr/bin/ghc"
 
-" Remove trailing whitespace on save "
-autocmd BufWritePre * :%s/\s\+$//e
+" Strip trailing whitespace
+function! <SID>StripTrailingWhitespaces()
+        " Preparation: save last search, and cursor position.
+        let _s=@/
+        let l = line(".")
+        let c = col(".")
+        " Do the business:
+        %s/\s\+$//e
+        " Clean up: restore previous search history, and cursor position
+        let @/=_s
+        call cursor(l, c)
+endfunction
+autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
+
+" f5 removes trailing whitespace
+nnoremap <silent> <F5> :call <SID>StripTrailingWhitespaces()<CR>
+
+function! Privatize()
+  let priorMethod = PriorMethodDefinition()
+  exec "normal iprivate :" . priorMethod  . "\<Esc>=="
+endfunction
+
+function! PriorMethodDefinition()
+  let lineNumber = search('def', 'bn')
+  let line       = getline(lineNumber)
+  if line == 0
+    echo "No prior method definition found"
+  endif
+  return matchlist(line, 'def \(\w\+\).*')[1]
+endfunction
+
+map <Leader>p :call Privatize()<CR>
 
 noremap  <Up> ""
 noremap! <Up> <Esc>
