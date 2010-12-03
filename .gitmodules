@@ -94,3 +94,6 @@
 [submodule "bundle/cucumber"]
 	path = bundle/cucumber
 	url = https://github.com/tpope/vim-cucumber.git
+[submodule "bundle/scala"]
+	path = bundle/scala
+	url = https://github.com/rosstimson/scala-vim-support.git
