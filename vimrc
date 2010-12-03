@@ -87,11 +87,11 @@ set title       " display title
 set scrolloff=3 " keep n lines of offset when scrolling
 
 if has("gui_macvim")
-  set fuoptions=maxvert,maxhorz " fullscreen options (MacVim only), resized window when changed to fullscreen
-  set guifont=Monaco:h10        " use Monaco 10pt
-  set guioptions-=T             " remove toolbar
-  set guioptions=aAce           " remove scrollbars
-  set noanti                    " turn off anti-aliasing
+    set fuoptions=maxvert,maxhorz " fullscreen options (MacVim only), resized window when changed to fullscreen
+    set guifont=Monaco:h10        " use Monaco 10pt
+    set guioptions-=T             " remove toolbar
+    set guioptions=aAce           " remove scrollbars
+    set noanti                    " turn off anti-aliasing
 end
 
 " F6 displays the syntax highlighting group of the item under the cursor
@@ -113,15 +113,15 @@ let g:ghc = "/usr/bin/ghc"
 
 " Strip trailing whitespace
 function! <SID>StripTrailingWhitespaces()
-        " Preparation: save last search, and cursor position.
-        let _s=@/
-        let l = line(".")
-        let c = col(".")
-        " Do the business:
-        %s/\s\+$//e
-        " Clean up: restore previous search history, and cursor position
-        let @/=_s
-        call cursor(l, c)
+    " Preparation: save last search, and cursor position.
+    let _s=@/
+    let l = line(".")
+    let c = col(".")
+    " Do the business:
+    %s/\s\+$//e
+    " Clean up: restore previous search history, and cursor position
+    let @/=_s
+    call cursor(l, c)
 endfunction
 autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
 
@@ -129,17 +129,17 @@ autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
 nnoremap <silent> <F5> :call <SID>StripTrailingWhitespaces()<CR>
 
 function! Privatize()
-  let priorMethod = PriorMethodDefinition()
-  exec "normal iprivate :" . priorMethod  . "\<Esc>=="
+    let priorMethod = PriorMethodDefinition()
+    exec "normal iprivate :" . priorMethod  . "\<Esc>=="
 endfunction
 
 function! PriorMethodDefinition()
-  let lineNumber = search('def', 'bn')
-  let line       = getline(lineNumber)
-  if line == 0
-    echo "No prior method definition found"
-  endif
-  return matchlist(line, 'def \(\w\+\).*')[1]
+    let lineNumber = search('def', 'bn')
+    let line       = getline(lineNumber)
+    if line == 0
+        echo "No prior method definition found"
+    endif
+    return matchlist(line, 'def \(\w\+\).*')[1]
 endfunction
 
 map <Leader>p :call Privatize()<CR>
