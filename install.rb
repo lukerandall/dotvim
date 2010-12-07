@@ -14,3 +14,4 @@ puts `git submodule update --init`
 
 puts `cd bundle/command-t; rvm use system; rake make`
 
+puts `cd bundle/javascript; rake ctags; rake clobber`
