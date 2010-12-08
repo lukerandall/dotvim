@@ -33,7 +33,7 @@
 	url = http://github.com/michaeljsmith/vim-indent-object.git
 [submodule "bundle/molokai"]
 	path = bundle/molokai
-	url = git@github.com:lukerandall/molokai.git
+	url = git://github.com/lukerandall/molokai.git
 [submodule "bundle/nerdcommenter"]
 	path = bundle/nerdcommenter
 	url = git://github.com/scrooloose/nerdcommenter.git
@@ -75,7 +75,7 @@
 	url = git://github.com/pangloss/vim-javascript.git
 [submodule "bundle/snipmate"]
 	path = bundle/snipmate
-	url = git@github.com:lukerandall/snipmate.vim.git
+	url = git://github.com/lukerandall/snipmate.vim.git
 [submodule "bundle/coffee-script"]
 	path = bundle/coffee-script
 	url = https://github.com/kchmck/vim-coffee-script.git
@@ -93,7 +93,7 @@
 	url = https://github.com/rosstimson/scala-vim-support.git
 [submodule "bundle/mustache"]
 	path = bundle/mustache
-	url = git@github.com:lukerandall/mustache-vim.git
+	url = git://github.com/lukerandall/mustache-vim.git
 [submodule "bundle/align"]
 	path = bundle/align
-	url = git@github.com:lukerandall/align-vim.git
+	url = git://github.com/lukerandall/align-vim.git
