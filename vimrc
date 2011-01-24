@@ -26,6 +26,8 @@ let g:easytags_cmd = '/usr/local/bin/ctags'
 let g:CommandTMaxHeight=15
 let g:yankring_history_file = '.yankring_history'
 nnoremap <leader>a :Ack<space>
+nnoremap <leader>l :Tabularize<space>/
+vnoremap <leader>l :Tabularize<space>/
 nnoremap <silent> <leader><space> :noh<CR>
 nnoremap <silent> <leader>y :YRShow<cr>
 inoremap <silent> <F3> <ESC>:YRShow<cr>
