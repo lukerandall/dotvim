@@ -6,6 +6,7 @@ set ttyfast      " speeds up drawing on fast terminals
 set ruler        " show cursor position
 set gdefault     " make searches global by default
 set laststatus=2 " show status bar
+set cursorline   " highlight line cursor is on
 
 call pathogen#runtime_append_all_bundles()
 
@@ -16,8 +17,8 @@ let mapleader = "," " map leader key
 nnoremap <C-e> 3<C-e>
 nnoremap <C-y> 3<C-y>
 
-map <leader>d :execute 'NERDTreeToggle ' . getcwd()<CR>
-map <leader>n :execute 'TlistToggle'<CR>
+map <leader>n :execute 'NERDTreeToggle ' . getcwd()<CR>
+map <leader>d :execute 'TlistToggle'<CR>
 map <leader>c :execute 'TlistAddFilesRecursive' . getcwd()<CR>
 map <leader>t :execute 'CommandT'<CR>
 map <leader>f :execute 'CommandTFlush'<CR>
@@ -38,6 +39,16 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 inoremap <D-CR> <ESC>o
+
+" Map Shift + motion key to change tabs
+set wildignore+=public/images,vendor/rails
+
+" Quickly jump between two most recent buffers
+map <Space> <C-^>
+
+" Easier moving between wrapped lines
+nmap <silent> j gj
+nmap <silent> k gk
 
 " leader + v to open new vertical split, leader + s to open a horizontal split, leader + o to close all other windows
 map <leader>v <C-w>v<C-w>l
@@ -79,7 +90,7 @@ set grepprg=ack\ -a " use ack for grepping
 nmap <silent> <leader>s :set nolist!<CR>
 set listchars=trail:·,precedes:<,extends:>
 
-set shortmess=atI " Shorten file messages
+set shortmess+=filmnrxoOtT " Shorten file messages
 
 runtime macros/matchit.vim " Enable matching with %
 
