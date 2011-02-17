@@ -49,9 +49,6 @@
 [submodule "bundle/ruby"]
 	path = bundle/ruby
 	url = http://github.com/vim-ruby/vim-ruby.git
-[submodule "bundle/space"]
-	path = bundle/space
-	url = http://github.com/spiiph/vim-space.git
 [submodule "bundle/speeddating"]
 	path = bundle/speeddating
 	url = http://github.com/tpope/vim-speeddating.git
