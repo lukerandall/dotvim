@@ -11,7 +11,10 @@ set cursorline   " highlight line cursor is on
 call pathogen#runtime_append_all_bundles()
 
 let mapleader = "," " map leader key
+" Swap in \ for , as \ is unused since , is my leader
 nnoremap \ ,
+" E takes you to the end of a word and starts appending
+nnoremap E ea
 
 " Remap C-(e|y) so that they scroll by 3 lines
 nnoremap <C-e> 3<C-e>
