@@ -38,6 +38,8 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
+
+" Allow Cmd-Enter to work like in TextMate
 inoremap <D-CR> <ESC>o
 
 " Map Shift + motion key to change tabs
