@@ -11,7 +11,7 @@ set cursorline   " highlight line cursor is on
 call pathogen#runtime_append_all_bundles()
 
 let mapleader = "," " map leader key
-"imap hh <Esc>
+nnoremap \ ,
 
 " Remap C-(e|y) so that they scroll by 3 lines
 nnoremap <C-e> 3<C-e>
