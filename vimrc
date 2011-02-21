@@ -32,7 +32,8 @@ let g:yankring_history_file = '.yankring_history'
 nnoremap <leader>a :Ack<space>
 nnoremap <leader>l :Tabularize<space>/
 vnoremap <leader>l :Tabularize<space>/
-nnoremap <silent> <leader><space> :noh<CR>
+nnoremap <leader>q :q<cr>
+nnoremap <silent> <leader><space> :noh<cr>
 nnoremap <silent> <leader>y :YRShow<cr>
 inoremap <silent> <F3> <ESC>:YRShow<cr>
 
