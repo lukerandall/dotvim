@@ -126,11 +126,6 @@ autocmd FileType erlang set expandtab
 autocmd FileType erlang set softtabstop=4
 let g:erlangHighlightBif = 1
 
-" Haskell
-au BufEnter *.hs compiler ghc
-let g:haddock_browser = "open"
-let g:ghc = "/usr/bin/ghc"
-
 " Strip trailing whitespace
 function! <SID>StripTrailingWhitespaces()
     " Preparation: save last search, and cursor position.
