@@ -20,15 +20,12 @@ nnoremap E ea
 nnoremap <C-e> 3<C-e>
 nnoremap <C-y> 3<C-y>
 
-map <leader>n :execute 'NERDTreeToggle ' . getcwd()<CR>
-map <leader>d :execute 'TlistToggle'<CR>
-map <leader>c :execute 'TlistAddFilesRecursive' . getcwd()<CR>
-map <leader>t :execute 'CommandT'<CR>
-map <leader>f :execute 'CommandTFlush'<CR>
-let Tlist_Ctags_Cmd = '/usr/local/bin/ctags'
-let g:easytags_cmd = '/usr/local/bin/ctags'
-let g:CommandTMaxHeight=15
-let g:yankring_history_file = '.yankring_history'
+nnoremap <leader>n :execute 'NERDTreeToggle ' . getcwd()<CR>
+nnoremap <leader>d :execute 'TlistToggle'<CR>
+nnoremap <leader>c :execute 'TlistAddFilesRecursive' . getcwd()<CR>
+nnoremap <leader>t :execute 'CommandT'<CR>
+nnoremap <leader>f :execute 'CommandTFlush'<CR>
+nnoremap <leader>gg :GundoToggle<CR>
 nnoremap <leader>a :Ack<space>
 nnoremap <leader>l :Tabularize<space>/
 vnoremap <leader>l :Tabularize<space>/
@@ -36,6 +33,11 @@ nnoremap <leader>q :q<cr>
 nnoremap <silent> <leader><space> :noh<cr>
 nnoremap <silent> <leader>y :YRShow<cr>
 inoremap <silent> <F3> <ESC>:YRShow<cr>
+
+let Tlist_Ctags_Cmd = '/usr/local/bin/ctags'
+let g:easytags_cmd = '/usr/local/bin/ctags'
+let g:CommandTMaxHeight=15
+let g:yankring_history_file = '.yankring_history'
 
 " Map Ctrl + motion key to change windows
 nnoremap <C-h> <C-w>h
