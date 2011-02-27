@@ -141,7 +141,7 @@ let g:erlangHighlightBif = 1
 " Haskell
 au BufEnter *.hs compiler ghc
 let g:haddock_browser = "open"
-let g:haddock_browser_callformat = "%s %s"
+let g:haddock_browser_callformat = "%s '%s'"
 
 " Strip trailing whitespace
 function! <SID>StripTrailingWhitespaces()
