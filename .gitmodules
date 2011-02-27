@@ -118,3 +118,6 @@
 [submodule "bundle/haskellmode"]
 	path = bundle/haskellmode
 	url = git@github.com:lukerandall/haskellmode-vim.git
+[submodule "bundle/erlang"]
+	path = bundle/erlang
+	url = https://github.com/oscarh/vimerl.git
