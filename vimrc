@@ -6,7 +6,6 @@ set ttyfast      " speeds up drawing on fast terminals
 set ruler        " show cursor position
 set gdefault     " make searches global by default
 set laststatus=2 " show status bar
-set cursorline   " highlight line cursor is on
 
 call pathogen#runtime_append_all_bundles()
 
