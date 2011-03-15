@@ -25,6 +25,8 @@ nnoremap <leader>c :execute 'TlistAddFilesRecursive' . getcwd()<CR>
 nnoremap <leader>t :execute 'CommandT'<CR>
 nnoremap <leader>f :execute 'CommandTFlush'<CR>
 nnoremap <leader>gg :GundoToggle<CR>
+nnoremap <leader>gr :GHCReload<CR>
+nnoremap <leader>gm :make<CR>
 nnoremap <leader>a :Ack<space>
 nnoremap <leader>l :Tabularize<space>/
 vnoremap <leader>l :Tabularize<space>/
