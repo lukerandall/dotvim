@@ -50,10 +50,14 @@ nnoremap <C-l> <C-w>l
 inoremap <D-CR> <ESC>o
 
 " Map Shift + motion key to change tabs
-set wildignore+=public/images,vendor/rails
+set wildignore+=public/images,vendor,tmp,/vendor
 
 " Quickly jump between two most recent buffers
 map <Space> <C-^>
+
+" Enable syntastic
+let g:syntastic_enable_signs=1
+let g:syntastic_quiet_warnings=1
 
 " Easier moving between wrapped lines
 nmap <silent> j gj
