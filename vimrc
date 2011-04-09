@@ -148,6 +148,10 @@ let g:erlangHighlightBif = 1
 au BufEnter *.hs compiler ghc
 let g:haddock_browser = "open"
 let g:haddock_browser_callformat = "%s '%s'"
+autocmd FileType haskell set tabstop=4
+autocmd FileType haskell set shiftwidth=4
+autocmd FileType haskell set expandtab
+autocmd FileType haskell set softtabstop=4
 
 " Strip trailing whitespace
 function! <SID>StripTrailingWhitespaces()
