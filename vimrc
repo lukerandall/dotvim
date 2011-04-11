@@ -49,9 +49,6 @@ nnoremap <C-l> <C-w>l
 " Allow Cmd-Enter to work like in TextMate
 inoremap <D-CR> <ESC>o
 
-" Map Shift + motion key to change tabs
-set wildignore+=public/images,vendor,tmp,/vendor
-
 " Quickly jump between two most recent buffers
 map <Space> <C-^>
 
@@ -77,7 +74,7 @@ set history=1000    " keep n items in history
 set wildmenu                  " enable menu for commands
 set wildmode=list:longest     " list options when hitting tab, and match longest common command
 set wildignore=*.log,*.swp,*~ " ignore these files when completing
-set wildignore+=public/images,vendor/rails
+set wildignore+=public/images,vendor/rails,dist/build,tmp
 
 set backspace=indent,eol,start " allow backspacing over autoindent, eols and start of insert
 
@@ -145,13 +142,21 @@ autocmd FileType erlang set softtabstop=4
 let g:erlangHighlightBif = 1
 
 " Haskell
-au BufEnter *.hs compiler ghc
+autocmd BufEnter *.hs compiler ghc
 let g:haddock_browser = "open"
 let g:haddock_browser_callformat = "%s '%s'"
 autocmd FileType haskell set tabstop=4
 autocmd FileType haskell set shiftwidth=4
 autocmd FileType haskell set expandtab
 autocmd FileType haskell set softtabstop=4
+
+" Cabal support
+function! SetToCabalBuild()
+  if glob("*.cabal") != ''
+    set makeprg=cabal\ build
+  endif
+endfunction
+autocmd BufEnter *.hs,*.lhs :call SetToCabalBuild()
 
 " Strip trailing whitespace
 function! <SID>StripTrailingWhitespaces()
