@@ -142,13 +142,13 @@ autocmd FileType erlang set softtabstop=4
 let g:erlangHighlightBif = 1
 
 " Haskell
-autocmd BufEnter *.hs compiler ghc
 let g:haddock_browser = "open"
 let g:haddock_browser_callformat = "%s '%s'"
 autocmd FileType haskell set tabstop=4
 autocmd FileType haskell set shiftwidth=4
 autocmd FileType haskell set expandtab
 autocmd FileType haskell set softtabstop=4
+autocmd FileType haskell compiler ghc
 
 " Cabal support
 function! SetToCabalBuild()
