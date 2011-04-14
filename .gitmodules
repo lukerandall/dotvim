@@ -10,9 +10,6 @@
 [submodule "bundle/camelcasemotion"]
 	path = bundle/camelcasemotion
 	url = http://github.com/vim-scripts/camelcasemotion.git
-[submodule "bundle/delimitmate"]
-	path = bundle/delimitmate
-	url = http://github.com/Raimondi/delimitMate.git
 [submodule "bundle/command-t"]
 	path = bundle/command-t
 	url = git://git.wincent.com/command-t.git
