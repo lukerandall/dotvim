@@ -150,6 +150,8 @@ autocmd FileType haskell set expandtab
 autocmd FileType haskell set softtabstop=4
 autocmd FileType haskell compiler ghc
 
+autocmd FileType haskell let g:syntastic_enable_signs=0
+
 " Cabal support
 function! SetToCabalBuild()
   if glob("*.cabal") != ''
