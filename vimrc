@@ -27,6 +27,7 @@ nnoremap <leader>f :execute 'CommandTFlush'<CR>
 nnoremap <leader>gg :GundoToggle<CR>
 nnoremap <leader>gr :GHCReload<CR>
 nnoremap <leader>gm :make<CR>
+nnoremap <leader>gt :call GenerateHaskellTags()<cr>
 nnoremap <leader>a :Ack<space>
 nnoremap <leader>l :Tabularize<space>/
 vnoremap <leader>l :Tabularize<space>/
@@ -74,7 +75,7 @@ set history=1000    " keep n items in history
 set wildmenu                  " enable menu for commands
 set wildmode=list:longest     " list options when hitting tab, and match longest common command
 set wildignore=*.log,*.swp,*~ " ignore these files when completing
-set wildignore+=public/images,vendor/rails,dist/build,tmp
+set wildignore+=public/images,vendor/rails,dist/build,tmp,cabal-dev,*.hi,*.o,*.dist,dist
 
 set backspace=indent,eol,start " allow backspacing over autoindent, eols and start of insert
 
@@ -152,6 +153,16 @@ autocmd FileType haskell set softtabstop=4
 autocmd FileType haskell compiler ghc
 
 autocmd FileType haskell let g:syntastic_enable_signs=0
+
+" The following enables tags to contain dots in keywords,
+" and generates tags for *.hs files recursively. It depends
+" on hothasktags being installed (cabal install hothasktags).
+set iskeyword=a-z,A-Z,_,.,39
+let g:hothasktags_cmd = "/Users/luke/Library/Haskell/bin/hothasktags"
+let g:hothasktags = "find . | egrep \.hs$ | xargs ".g:hothasktags_cmd." > tags"
+function! GenerateHaskellTags()
+  silent exe '!'.g:hothasktags
+endfunction
 
 " Cabal support
 function! SetToCabalBuild()
