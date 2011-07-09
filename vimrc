@@ -7,7 +7,7 @@ set ruler        " show cursor position
 set gdefault     " make searches global by default
 set laststatus=2 " show status bar
 
-call pathogen#runtime_append_all_bundles()
+call pathogen#infect()
 
 let mapleader = "," " map leader key
 " Swap in \ for , as \ is unused since , is my leader
