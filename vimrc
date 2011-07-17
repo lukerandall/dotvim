@@ -24,8 +24,9 @@ nnoremap <leader>d :execute 'TlistToggle'<CR>
 nnoremap <leader>c :execute 'TlistAddFilesRecursive' . getcwd()<CR>
 nnoremap <leader>t :execute 'CommandT'<CR>
 nnoremap <leader>f :execute 'CommandTFlush'<CR>
-nnoremap <leader>gg :GundoToggle<CR>
+nnoremap <leader>u :GundoToggle<CR>
 nnoremap <leader>gr :GHCReload<CR>
+nnoremap <leader>gg :GhciFile<CR>
 nnoremap <leader>gm :make<CR>
 nnoremap <leader>gt :call GenerateHaskellTags()<cr>
 nnoremap <leader>a :Ack<space>
@@ -153,6 +154,12 @@ autocmd FileType haskell set softtabstop=4
 autocmd FileType haskell compiler ghc
 
 autocmd FileType haskell let g:syntastic_enable_signs=0
+
+" C++
+autocmd FileType cpp set tabstop=4
+autocmd FileType cpp set shiftwidth=4
+autocmd FileType cpp set expandtab
+autocmd FileType cpp set softtabstop=4
 
 " The following enables tags to contain dots in keywords,
 " and generates tags for *.hs files recursively. It depends
