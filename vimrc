@@ -25,10 +25,7 @@ nnoremap <leader>c :execute 'TlistAddFilesRecursive' . getcwd()<CR>
 nnoremap <leader>t :execute 'CommandT'<CR>
 nnoremap <leader>f :execute 'CommandTFlush'<CR>
 nnoremap <leader>u :GundoToggle<CR>
-nnoremap <leader>gr :GHCReload<CR>
-nnoremap <leader>gg :GhciFile<CR>
 nnoremap <leader>gm :make<CR>
-nnoremap <leader>gt :call GenerateHaskellTags()<cr>
 nnoremap <leader>a :Ack<space>
 nnoremap <leader>l :Tabularize<space>/
 vnoremap <leader>l :Tabularize<space>/
@@ -152,6 +149,11 @@ autocmd FileType haskell set shiftwidth=4
 autocmd FileType haskell set expandtab
 autocmd FileType haskell set softtabstop=4
 autocmd FileType haskell compiler ghc
+
+autocmd FileType haskell nnoremap <leader>gg :GHCReload<CR>
+autocmd FileType haskell nnoremap <leader>gf :GhciFile<CR>
+autocmd FileType haskell vnoremap <leader>gr :GhciRange<CR>
+autocmd FileType haskell nnoremap <leader>gt :call GenerateHaskellTags()<CR>
 
 autocmd FileType haskell let g:syntastic_enable_signs=0
 
