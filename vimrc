@@ -163,6 +163,19 @@ autocmd FileType cpp set shiftwidth=4
 autocmd FileType cpp set expandtab
 autocmd FileType cpp set softtabstop=4
 
+" JavaScript
+autocmd FileType javascript set tabstop=4
+autocmd FileType javascript set shiftwidth=4
+autocmd FileType javascript set expandtab
+autocmd FileType javascript set softtabstop=4
+
+" JSON
+au BufNewFile,BufRead *.json,*.jsn  set filetype=JSON
+autocmd FileType JSON set tabstop=4
+autocmd FileType JSON set shiftwidth=4
+autocmd FileType JSON set expandtab
+autocmd FileType JSON set softtabstop=4
+
 " The following enables tags to contain dots in keywords,
 " and generates tags for *.hs files recursively. It depends
 " on hothasktags being installed (cabal install hothasktags).
