@@ -130,16 +130,11 @@ map <F6> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<
 \ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
 \ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
 
-" Omnicompletion
+" Ruby
 autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete
 autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
 autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
 autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
-
-autocmd FileType python set omnifunc=pythoncomplete#Complete
-autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
-autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
-autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 
 " Erlang
 autocmd FileType erlang set tabstop=4
@@ -175,6 +170,7 @@ autocmd FileType javascript set tabstop=4
 autocmd FileType javascript set shiftwidth=4
 autocmd FileType javascript set expandtab
 autocmd FileType javascript set softtabstop=4
+autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 
 " JSON
 au BufNewFile,BufRead *.json,*.jsn  set filetype=JSON
@@ -182,6 +178,13 @@ autocmd FileType JSON set tabstop=4
 autocmd FileType JSON set shiftwidth=4
 autocmd FileType JSON set expandtab
 autocmd FileType JSON set softtabstop=4
+
+" Python
+autocmd FileType python set omnifunc=pythoncomplete#Complete
+
+" HTML & CSS
+autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
+autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 
 " Cabal support
 function! SetToCabalBuild()
