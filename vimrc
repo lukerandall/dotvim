@@ -51,6 +51,13 @@ inoremap <D-CR> <ESC>o
 " Quickly jump between two most recent buffers
 map <Space> <C-^>
 
+" Bubble single lines
+nmap <C-Up> [e
+nmap <C-Down> ]e
+" Bubble multiple lines
+vmap <C-Up> [egv
+vmap <C-Down> ]egv
+
 " Enable syntastic
 let g:syntastic_enable_signs=1
 let g:syntastic_quiet_warnings=1
