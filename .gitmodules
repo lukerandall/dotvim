@@ -130,3 +130,6 @@
 [submodule "bundle/json"]
 	path = bundle/json
 	url = https://github.com/vim-scripts/JSON.vim.git
+[submodule "bundle/less"]
+	path = bundle/less
+	url = https://github.com/lunaru/vim-less.git
