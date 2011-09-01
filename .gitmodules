@@ -136,3 +136,6 @@
 [submodule "bundle/rvm"]
 	path = bundle/rvm
 	url = https://github.com/tpope/vim-rvm.git
+[submodule "bundle/bundler"]
+	path = bundle/bundler
+	url = https://github.com/tpope/vim-bundler.git
