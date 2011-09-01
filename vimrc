@@ -176,16 +176,6 @@ autocmd FileType JSON set shiftwidth=4
 autocmd FileType JSON set expandtab
 autocmd FileType JSON set softtabstop=4
 
-" The following enables tags to contain dots in keywords,
-" and generates tags for *.hs files recursively. It depends
-" on hothasktags being installed (cabal install hothasktags).
-set iskeyword=a-z,A-Z,_,.,39
-let g:hothasktags_cmd = "/Users/luke/Library/Haskell/bin/hothasktags"
-let g:hothasktags = "find . | egrep \.hs$ | xargs ".g:hothasktags_cmd." > tags"
-function! GenerateHaskellTags()
-  silent exe '!'.g:hothasktags
-endfunction
-
 " Cabal support
 function! SetToCabalBuild()
   if glob("*.cabal") != ''
