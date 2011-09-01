@@ -133,3 +133,6 @@
 [submodule "bundle/less"]
 	path = bundle/less
 	url = https://github.com/lunaru/vim-less.git
+[submodule "bundle/rvm"]
+	path = bundle/rvm
+	url = https://github.com/tpope/vim-rvm.git
