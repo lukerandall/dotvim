@@ -209,3 +209,8 @@ autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
 
 " f5 removes trailing whitespace
 nnoremap <silent> <F5> :call <SID>StripTrailingWhitespaces()<CR>
+
+" Include user's local vim config
+if filereadable(expand("~/.vimrc.local"))
+  source ~/.vimrc.local
+endif
