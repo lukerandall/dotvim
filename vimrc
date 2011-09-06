@@ -124,8 +124,8 @@ if has("gui_macvim")
     set noanti                    " turn off anti-aliasing
 end
 
-" F6 displays the syntax highlighting group of the item under the cursor
-map <F6> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
+" F7 displays the syntax highlighting group of the item under the cursor
+map <F7> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
 \ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
 \ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
 
