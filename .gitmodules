@@ -145,3 +145,6 @@
 [submodule "bundle/slim"]
 	path = bundle/slim
 	url = https://github.com/bbommarito/vim-slim.git
+[submodule "bundle/ir_brown"]
+	path = bundle/ir_brown
+	url = git@github.com:lukerandall/ir_brown.vim.git
