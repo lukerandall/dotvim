@@ -84,7 +84,8 @@ set wildignore+=public/images,vendor/rails,dist/build,tmp,cabal-dev,*.hi,*.o,*.d
 
 set backspace=indent,eol,start " allow backspacing over autoindent, eols and start of insert
 
-colorscheme ir_brown
+set background=dark
+colorscheme solarized
 
 syntax on                 " enable syntax highlighting
 filetype plugin on        " enable filetype detection and plugins
