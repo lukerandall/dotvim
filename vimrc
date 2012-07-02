@@ -118,10 +118,10 @@ set scrolloff=3 " keep n lines of offset when scrolling
 
 if has("gui_macvim")
     set fuoptions=maxvert,maxhorz " fullscreen options (MacVim only), resized window when changed to fullscreen
-    set guifont=Monaco:h10        " use Monaco 10pt
+    set guifont=Menlo:h14         " use Menlo 12 pt
     set guioptions-=T             " remove toolbar
     set guioptions=aAce           " remove scrollbars
-    set noanti                    " turn off anti-aliasing
+    " set noanti                    " turn off anti-aliasing
 end
 
 " F7 displays the syntax highlighting group of the item under the cursor
