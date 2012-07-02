@@ -71,7 +71,7 @@ map <leader>v <C-w>v<C-w>l
 map <leader>h <C-w>s<C-w>j
 map <leader>o <C-w>o
 
-" leader + w to save buffer
+" leader + s to save buffer
 map <leader>s :w<CR>
 
 set directory=/tmp/ " save temp files in /tmp
