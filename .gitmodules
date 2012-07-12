@@ -130,9 +130,6 @@
 [submodule "bundle/less"]
 	path = bundle/less
 	url = https://github.com/lunaru/vim-less.git
-[submodule "bundle/rvm"]
-	path = bundle/rvm
-	url = https://github.com/tpope/vim-rvm.git
 [submodule "bundle/commentary"]
 	path = bundle/commentary
 	url = https://github.com/tpope/vim-commentary.git
@@ -148,3 +145,6 @@
 [submodule "bundle/ir_brown"]
 	path = bundle/ir_brown
 	url = git@github.com:lukerandall/ir_brown.vim.git
+[submodule "bundle/powerline"]
+	path = bundle/powerline
+	url = https://github.com/Lokaltog/vim-powerline.git
