@@ -85,7 +85,7 @@ set wildignore+=public/images,vendor/rails,dist/build,tmp,cabal-dev,*.hi,*.o,*.d
 set backspace=indent,eol,start " allow backspacing over autoindent, eols and start of insert
 
 set background=dark
-colorscheme solarized
+colorscheme codeschool
 
 syntax on                 " enable syntax highlighting
 filetype plugin on        " enable filetype detection and plugins
@@ -119,7 +119,7 @@ set scrolloff=3 " keep n lines of offset when scrolling
 
 if has("gui_macvim")
     set fuoptions=maxvert,maxhorz " fullscreen options (MacVim only), resized window when changed to fullscreen
-    set guifont=Menlo:h14         " use Menlo 12 pt
+    set guifont=Monaco:h12         " use Menlo 12 pt
     set guioptions-=T             " remove toolbar
     set guioptions=aAce           " remove scrollbars
     " set noanti                    " turn off anti-aliasing
