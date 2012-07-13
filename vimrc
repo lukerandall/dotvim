@@ -6,6 +6,8 @@ set ttyfast      " speeds up drawing on fast terminals
 set ruler        " show cursor position
 set gdefault     " make searches global by default
 set laststatus=2 " show status bar
+set nocompatible " disable vi-compatibility
+set encoding=utf-8 " Necessary to show unicode glyphs
 
 call pathogen#infect()
 
@@ -215,3 +217,5 @@ nnoremap <silent> <F5> :call <SID>StripTrailingWhitespaces()<CR>
 if filereadable(expand("~/.vimrc.local"))
   source ~/.vimrc.local
 endif
+
+let g:Powerline_symbols = 'compatible'
